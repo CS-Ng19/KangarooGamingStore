@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Hypixel Rank</title>
+    <link rel="stylesheet" href="hypixelrank/rankstyle.css" />
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" id="logo" alt="Logo" />
+        <h1>Hypixel&nbsp;Rank&nbsp;</h1>
+        <p class="required-note1">
+            ＊ 為必填欄位，所有產品均以原價標示，所有價格請以
+            <a href="https://docs.google.com/spreadsheets/d/1uOCRUG-QFxTyRp8vQ7dMWxzSc8lpHbcCfGHmvSqiy8s/edit">最新價格</a>
+            為準🙏
+        </p>
+
+    </header>
+    <main>
+        <form id="orderForm">
+            <!-- ========== 商品清單 (可複選) ========== -->
+            <section class="product-list">
+                <h2>選擇商品<span class="asterisk">*</span></h2>
+
+                <!-- Hypixel Rank -->
+                <fieldset class="product-block" data-product="Hypixel Rank">
+                    <legend>
+                        <label>
+                            <input type="checkbox" class="prod-check" />
+                            Hypixel Rank
+                        </label>
+                        <small class="desc">非黑卡</small>
+                    </legend>
+
+                    <label class="required">Rank / 價格</label>
+                    <select disabled class="variant">
+                        <option disabled selected value="">請選擇</option>
+                        <option value="VIP - 56">VIP - $56</option>
+                        <option value="VIP+ - 128">VIP+ - $128</option>
+                        <option value="MVP - 265">MVP - $265</option>
+                        <option value="MVP+ - 368.5">MVP+ - $368.5</option>
+                    </select>
+
+                    <input type="hidden" class="qty" value="1" />
+                </fieldset>
+
+                <!-- [VIP] 升級 -->
+                <fieldset class="product-block" data-product="[VIP] 升級">
+                    <legend>
+                        <label>
+                            <input type="checkbox" class="prod-check" />
+                            [VIP] 升級 
+                        </label>
+                        <small class="desc">僅適用於 VIP 升級</small>
+                    </legend>
+
+                    <label class="required">Rank / 價格</label>
+                    <select disabled class="variant">
+                        <option disabled selected value="">請選擇</option>
+                        <option value="VIP - 56">VIP - $56</option>
+                        <option value="VIP+ - 128">VIP+ - $128</option>
+                        <option value="MVP - 265">MVP - $265</option>
+                        <option value="MVP+ - 368.5">MVP+ - $368.5</option>
+                    </select>
+
+                    <input type="hidden" class="qty" value="1" />
+                </fieldset>
+
+                <!-- [VIP+] 升級 -->
+                <fieldset class="product-block" data-product="[VIP+] 升級">
+                    <legend>
+                        <label>
+                            <input type="checkbox" class="prod-check" />
+                            [VIP+] 升級
+                        </label>
+                        <small class="desc">僅適用於 VIP+ 升級</small>
+                    </legend>
+
+                    <label class="required">Rank / 價格</label>
+                    <select disabled class="variant">
+                        <option disabled selected value="">請選擇</option>
+                        <option value="MVP - 265">MVP - $265</option>
+                        <option value="MVP+ - 368.5">MVP+ - $368.5</option>
+                    </select>
+
+                    <input type="hidden" class="qty" value="1" />
+                </fieldset>
+
+                <!-- [MVP] 升級 -->
+                <fieldset class="product-block" data-product="[MVP] 升級">
+                    <legend>
+                        <label>
+                            <input type="checkbox" class="prod-check" />
+                            [MVP] 升級
+                        </label>
+                        <small class="desc">僅適用於 MVP 升級</small>
+                    </legend>
+
+                    <label class="required">Rank / 價格</label>
+                    <select disabled class="variant">
+                        <option disabled selected value="">請選擇</option>
+                        <option value="MVP+ - 368.5">MVP+ - $368.5</option>
+                    </select>
+
+                    <input type="hidden" class="qty" value="1" />
+                </fieldset>
+
+                <!-- 以優惠價加配 -->
+                <fieldset class="product-block" data-product="優惠價加配">
+                    <legend>
+                        <label>
+                            <input type="checkbox" class="prod-check" />
+                            以優惠價加配
+                        </label>
+                        <small class="desc">可購 1–3 件</small>
+                    </legend>
+
+                    <label class="required">加配 / 價格</label>
+                    <select disabled class="variant">
+                        <option disabled selected value="">請選擇</option>
+                        <option value="Optifine Cape - 79">全新 Optifine 披風 - $79</option>
+                        <option value="MC PC+Win10 Code - 142">Minecraft PC&Win10 兌換碼 - $142</option>
+                    </select>
+
+                    <label class="required">數量</label>
+                    <input type="number" class="qty" disabled min="1" max="3" value="1" />
+                </fieldset>
+            </section>
+
+            <!-- ========== 總價 ========== -->
+            <div class="total">總價：<span id="totalAmount">$0</span></div>
+
+            <!-- ========== 資料 ========== -->
+            <section class="user">
+                <label for="name" class="required">遊戲內名稱 IGN</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email" class="required">電郵(以接收收據)</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="pay" class="required">支付方式</label>
+                <select id="pay" name="pay" required>
+                    <option disabled selected value="">請選擇支付方式</option>
+                    <option>AlipayHK</option>
+                    <option>WechatPayHK</option>
+                    <option>Optopus Wallet</option>
+                    <option>PayMe</option>
+                    <option>Tap&amp;Go</option>
+                    <option>FPS轉數快</option>
+                </select>
+
+                <label for="note">備注</label>
+                <textarea id="note" name="note" rows="3"
+                          placeholder="可輸入特別需求…"></textarea>
+            </section>
+
+            <button type="submit" id="submitBtn">提交訂單</button>
+            <p id="msg"></p>
+        </form>
+    </main>
+
+    <!-- ========= Footer & Social ========= -->
+    <footer>
+        <div class="social">
+            <!-- Instagram -->
+            <a href="https://www.carousell.com.hk/p/vip-43-hypixel-rank-%E4%BB%A3%E8%B3%BC-1326716830/" class="social-btn carou" aria-label="carousell">
+                <img src="img/smallcarou.png" id="logo" alt="Logo" height="33"/>
+            </a>
+        </div class="social">
+                <p class="copyright"> 2025 Kangaroo Gaming Store</p>
+</footer>
+
+    <!-- ================= JavaScript ================= -->
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwVyNArdT1tqkhQUxiEIp8mrI7EfdwsZeNywSQ157kxG_N00ungdNEo9NYIMXojaw8-tA/exec"; 
+        const genOrderId = () =>
+            Math.floor(10000 + Math.random() * 90000).toString();
+
+        /* 價格表 (HKD) */
+        const priceMap = {
+            "VIP - 56": 56,
+            "VIP+ - 128": 128,
+            "MVP - 265": 265,
+            "MVP+ - 368.5": 368.5,
+            "Optifine Cape - 79": 79,
+            "MC PC+Win10 Code - 142": 142
+        };
+
+        /* === DOM === */
+        const totalAmtEl = document.getElementById("totalAmount");
+
+        /* === 啟用 / 停用欄位 === */
+        document.querySelectorAll(".product-block").forEach(block => {
+            const chk = block.querySelector(".prod-check");
+            const varnt = block.querySelector(".variant");
+            const qty = block.querySelector(".qty");
+
+            chk.addEventListener("change", () => {
+                const on = chk.checked;
+                varnt.disabled = !on;
+                qty.disabled = !on;
+                if (!on) {
+                    varnt.selectedIndex = 0;
+                    qty.value = qty.type === "number" ? 1 : qty.value;
+                }
+                calcTotal();
+            });
+
+            varnt.addEventListener("change", calcTotal);
+            if (qty.type === "number") qty.addEventListener("input", calcTotal);
+        });
+
+        /* === 計算總價 === */
+        function calcTotal() {
+            let sum = 0;
+            document.querySelectorAll(".product-block").forEach(b => {
+                if (!b.querySelector(".prod-check").checked) return;
+                const v = b.querySelector(".variant").value;
+                const q = Number(b.querySelector(".qty").value || 1);
+                if (v && priceMap[v] !== undefined) {
+                    sum += priceMap[v] * q;
+                }
+            });
+            totalAmtEl.textContent = "$" + sum.toFixed(1).replace(/\.0$/, "");
+            return sum;
+        }
+
+        /* === 提交表單 === */
+        document.getElementById("orderForm").addEventListener("submit", async e => {
+            e.preventDefault();
+            const f = e.target;
+            const btn = submitBtn;
+            const msg = document.getElementById("msg");
+
+            const items = [];
+            document.querySelectorAll(".product-block").forEach(b => {
+                if (!b.querySelector(".prod-check").checked) return;
+                const product = b.dataset.product;
+                const variant = b.querySelector(".variant").value;
+                const qty = b.querySelector(".qty").value;
+                items.push({ product, variant, qty });
+            });
+
+            if (items.length === 0) {
+                msg.textContent = "請至少選擇一件商品";
+                return;
+            }
+
+            if (!f.checkValidity()) {
+                msg.textContent = "請完整填寫標記 * 的欄位";
+                return;
+            }
+
+            const total = calcTotal();
+
+            const data = {
+                orderId: genOrderId(),
+                name: f.name.value.trim(),
+                email: f.email.value.trim(),
+                pay: f.pay.value,
+                note: f.note.value.trim(),
+                total,
+                items
+            };
+
+            btn.disabled = true;
+            msg.textContent = "提交中…";
+
+            try {
+                await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+                msg.textContent = `下單成功！訂單編號：${data.orderId}`;
+                f.reset();
+                document.querySelectorAll(".product-block").forEach(b => {
+                    b.querySelector(".variant").disabled = true;
+                    b.querySelector(".qty").disabled = true;
+                });
+                totalAmtEl.textContent = "$0";
+            } catch (err) {
+                console.error(err);
+                msg.textContent = "提交失敗，請稍後再試 // Please dm to report.";
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
