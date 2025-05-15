@@ -1,0 +1,143 @@
+l<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kangaroo Gaming Store : Hypixel 落單系統</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+QSDCUQs6fXet6koA6Y+8GkSkpP7LnN25DvblXQoWkuiXHtgiNRT5wmV8N3e7Sj7e3kud6O6i1Zj+ojdESA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ╭─ Header ───────────────────────────────────────────────╮ -->
+        <header>
+            <img src="img/logo.png" alt="Kangaroo Gaming Store" class="logo" />
+            <h1>Hypixel Store 落單系統</h1>
+            <p class="subtitle">* 必填欄位</p>
+        </header>
+        <div class="container2">
+            <p class="required-note">
+                所有產品均以原價標示，所有價格請以最新價格為準。
+                <br>
+                <a href="https://docs.google.com/spreadsheets/d/1uOCRUG-QFxTyRp8vQ7dMWxzSc8lpHbcCfGHmvSqiy8s/">按此前往Rank價格表</a><br>
+                <a href="https://docs.google.com/spreadsheets/d/1vSyxd7Y8Csshnf60niuVHzINvZnVGO4Zyu8gRiyj1Lw/">按此前往其他商品價格表</a>
+
+            </p>
+            <span />
+        </div>
+        <!-- ╭─ 表單 ────────────────────────────────────────────────╮ -->
+        <form id="orderForm">
+            <!-- 顧客資料 -->
+            <fieldset>
+                <legend>資料</legend>
+                <div class="ignBox">
+                    <label for="name">輸入玩家名稱 (IGN) <span class="req">*</span></label>
+                    <input id="name" name="name" type="text" autocomplete="off" required />
+                </div>
+                <div id="preview">
+                    <label for="name">該玩家皮膚預覽將顯示於此，請確保輸入無誤: </label>
+                    <img id="headImg" alt="Head 預覽將顯示於此" />
+                    <div id="status"></div>
+                </div>
+
+                <label for="email">電郵 (用於接收收據)<span class="req">*</span></label>
+                <input id="email" name="email" type="email" required
+                       placeholder="example@mail.com" />
+            </fieldset>
+
+            <!-- 商品清單 -->
+            <fieldset>
+                <legend>商品 <span class="req">*</span></legend>
+
+                <table id="itemTable">
+                    <thead>
+                        <tr>
+                            <th style="width:30%">商品</th>
+                            <th style="width:34%">方案</th>
+                            <th style="width:14%">數量</th>
+                            <th style="width:16%">價格</th>
+                            <th style="width:6%"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <button type="button" class="addBtn" id="addItemBtn">＋ 新增產品</button>
+            </fieldset>
+
+            <!-- 優惠碼 -->
+            <fieldset>
+                <legend>優惠碼</legend>
+                <div class="couponBox">
+                    <input id="coupon" type="text" placeholder="輸入優惠碼(如有)" />
+                    <button type="button" id="applyCoupon">套用</button>
+                </div>
+                <p id="couponMsg" class="couponMsg"></p>
+            </fieldset>
+
+            <!-- 價格明細 -->
+            <fieldset>
+                <legend>價格明細</legend>
+                <p class="totalLine">
+                    小計：<span id="subTotal">$0</span><br />
+                    折扣：<span id="discount">$0</span><br />
+                    <strong>總計：<span id="totalPrice">$0</span></strong>
+                </p>
+            </fieldset>
+
+            <!-- 支付方式 -->
+            <fieldset>
+                <legend>支付方式</legend>
+                <label for="payment">支付方式 <span class="req">*</span></label>
+                <select id="payment" name="payment" required>
+                    <option value="" hidden selected>請選擇…</option>
+                    <option value="AlipayHK">AlipayHK</option>
+                    <option value="WechatPayHK">WechatPayHK</option>
+                    <option value="PayMe">PayMe</option>
+                    <option value="Tap&Go">Tap&amp;Go</option>
+                    <option value="FPS轉數快">FPS 轉數快</option>
+                </select>
+            </fieldset>
+
+            <!-- 備註 -->
+            <label for="note">備註</label>
+            <textarea id="note" name="note" rows="3"
+                      placeholder="可輸入特別需求…"></textarea>
+
+            <!-- 隱藏欄位（送 Google 試算表） -->
+            <input type="hidden" id="orderId" name="orderId" />
+            <input type="hidden" id="items" name="items" />
+            <input type="hidden" id="couponCode" name="couponCode" />
+            <input type="hidden" id="discountVal" name="discount" />
+            <input type="hidden" id="totalVal" name="total" />
+
+            <!-- 送出 -->
+            <button type="submit" id="submitBtn">送出訂單</button>
+            <p id="resultMsg"></p>
+        </form>
+        <!-- ========= Footer & Social ========= -->
+        <footer>
+            <div class="social">
+                <!-- Instagram -->
+                <a href="https://www.carousell.com.hk/p/vip-43-hypixel-rank-%E4%BB%A3%E8%B3%BC-1326716830/" class="social-btn carou" aria-label="carousell">
+                    <img src="img/carousicon.png" id="logo" alt="Logo" height="33" />
+                </a>
+            </div>
+            <p class="copyright"> 2025 Kangaroo Gaming Store V1.3</p>
+        </footer>
+    </div>
+
+        <script src="javascript/coupon.js"></script>
+        <script src="javascript/getsk.js"></script>
+        <script src="javascript/connect.js"></script>
+        <script src="javascript/productlist.js"></script>
+        <script src="javascript/mainprog.js"></script>
+        <script src="javascript/onsubmit.js"></script>
+    
+</body>
+</html>

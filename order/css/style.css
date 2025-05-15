@@ -1,0 +1,278 @@
+:root {
+    --red: #b71c1c;
+    --red-dark: #8b1515;
+    --black: #111;
+    --gray-bg: #f9f9f9;
+    --gray-line: #e0e0e0;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+body {
+    background: var(--gray-bg);
+    color: var(--black)
+}
+
+.container {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08)
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto .6rem
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--red);
+    letter-spacing: .5px;
+    margin-bottom: .3rem
+}
+
+.subtitle {
+    text-align: center;
+    font-size: .85rem;
+    color: #666;
+    margin-bottom: 1.3rem
+}
+
+label {
+    display: block;
+    margin: .8rem 0 .3rem;
+    font-weight: 600
+}
+
+.req {
+    color: var(--red);
+    margin-left: .2rem
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: .6rem .7rem;
+    border: 1px solid var(--gray-line);
+    border-radius: 6px;
+    font-size: .95rem
+}
+
+textarea {
+    resize: vertical
+}
+
+fieldset {
+    border: 1px solid var(--gray-line);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.2rem
+}
+
+legend {
+    padding: 0 .5rem;
+    font-weight: 600;
+    color: var(--black)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem
+}
+
+th, td {
+    border-bottom: 1px solid var(--gray-line);
+    padding: .45rem
+}
+
+th {
+    background: #fafafa;
+    text-align: left
+}
+
+td:last-child {
+    text-align: center
+}
+
+.addBtn {
+    margin-top: .8rem;
+    background: var(--red);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s
+}
+
+    .addBtn:hover {
+        background: var(--red-dark)
+    }
+
+.delBtn {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .15s
+}
+
+    .delBtn:hover {
+        background: var(--red-dark)
+    }
+
+.couponBox {
+    display: flex;
+    gap: .5rem
+}
+
+    .couponBox input {
+        flex: 1
+    }
+
+    .couponBox button {
+        width: auto;
+        background: var(--black);
+        color: var(--white);
+        font-weight: 600;
+        cursor: pointer;
+        transition: background .15s
+    }
+
+        .couponBox button:hover {
+            background: #000
+        }
+
+.couponMsg {
+    margin-top: .4rem;
+    font-size: .85rem;
+    color: #555
+}
+
+.totalLine {
+    line-height: 1.55;
+    font-size: 1rem;
+    text-align: right;
+    font-weight: 700
+}
+
+    .totalLine strong {
+        font-size: 1.12rem
+    }
+
+button[type="submit"] {
+    margin-top: 1.3rem;
+    background: var(--red);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s
+}
+
+    button[type="submit"]:disabled {
+        background: #666;
+        cursor: not-allowed
+    }
+
+    button[type="submit"]:not(:disabled):hover {
+        background: var(--red-dark)
+    }
+
+#resultMsg {
+    margin-top: .8rem;
+    font-size: .9rem
+}
+
+    #resultMsg.ok {
+        color: #0b8f22
+    }
+
+    #resultMsg.err {
+        color: var(--red)
+    }
+
+footer {
+    margin-top: 2.5rem;
+    text-align: center
+}
+
+    footer p {
+        font-weight: 600;
+        margin-bottom: .6rem;
+        color: var(--black)
+    }
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: .65rem;
+    margin-bottom: .7rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    transition: background .2s,transform .2s;
+}
+
+    .social-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+
+    .social-btn svg {
+        pointer-events: none;
+    }
+
+footer small {
+    color: #777;
+    font-size: .8rem
+}
+
+.ignBox {
+    display: .3rem;
+    gap: .3rem
+}
+
+#preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+    min-height: 100px;
+}
+
+#headImg {
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    border: var(--border);
+    background: #0001;
+}
+
+/*   ᴣ堠 */
+.required-note {
+    text-align: center;
+    font-size: .85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
