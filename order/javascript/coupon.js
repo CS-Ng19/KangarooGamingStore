@@ -1,1 +1,15 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('n.g={h:{7:"2",9:f,0:5,3:"c $f 8 $5"},i:{7:"2",9:a,0:e,3:"c $a 8 $e"},j:{7:"2",0:6,o:"b d",3:"l b k d 8 $4"},m:{7:"2",9:1,0:1,3:"8 $1"}};',25,25,'value||flat|desc||||type|減|threshold|250|3600|買滿|Gems|10|100|coupons|d5off|d10off|sbg4|Skyblock|購買|May1|window|target'.split('|'),0,{}))
+window.coupons = {
+  d5off:{
+    type:"flat",threshold:100,value:5,desc:"買滿 $100 減 $5"
+  },
+  d10off:{
+    type:"flat",threshold:250,value:10,desc:"買滿 $250 減 $10"
+  },
+  sbg4:{
+    type:"flat",value:6,target:"3600 Gems",desc:"購買 3600 Skyblock Gems 減 $4"
+  },
+  May1:{
+    type:"flat",threshold:1,value:1,desc:"減 $1"
+  }
+
+};
