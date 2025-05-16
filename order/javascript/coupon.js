@@ -1,1 +1,45 @@
-window["\x63\x6f\x75\x70\x6f\x6e\x73"] = {    d5off: {        type: "\x66\x6c\x61\x74",        threshold: 100,        value: 5,        desc: "\u8cb7\u6eff \x24\x31\x30\x30 \u6e1b \x24\x35"    },    d10off: {        type: "\x66\x6c\x61\x74",        threshold: 250,        value: 10,        desc: "\u8cb7\u6eff \x24\x32\x35\x30 \u6e1b \x24\x31\x30"    },    sbg4: {        type: "\x66\x6c\x61\x74",        value: 6,        target: "\x33\x36\x30\x30 \x47\x65\x6d\x73",        desc: "\u8cfc\u8cb7 \x33\x36\x30\x30 \x53\x6b\x79\x62\x6c\x6f\x63\x6b \x47\x65\x6d\x73 \u6e1b \x24\x34"    },    May1: {        type: "\x66\x6c\x61\x74",        threshold: 1,        value: 1,        desc: "\u6e1b \x24\x31"    },    r4axh3: {        type: "\x66\x6c\x61\x74",        threshold: 59,        value: 3,        desc: "\x5b\x54\x68\x61\x6e\x6b\x73 \x66\x6f\x72 \x62\x75\x67 \x72\x65\x70\x6f\x72\x74\x5d \u8cb7\u6eff \x24\x35\x39 \u6e1b \x24\x33"    },    gb5ht7GBQ: {        type: "\x66\x6c\x61\x74",        value: 12,        target: "\x56\x49\x50\x2c"        desc: "\x5b\u9650\u6642\u512a\u60e0\x5d \u8cfc\u8cb7 \x56\x49\x50 \u6e1b \x24\x31\x32"    },    usernt7Gamgb5ht7Gtt7G7Gt7GQehere: {        type: "\x66\x6c\x61\x74",        threshold: 1,        value: 3,        desc: "\u3010\u4e94\u661f\x43\x6f\x6d\x6d\x65\x6e\x74\u3011\u6e1b\x24\x33"    }};
+window.coupons = {
+    d5off: {
+        type: "flat",
+        threshold: 100,
+        value: 5,
+        desc: "買滿 $100 減 $5"
+    },
+    d10off: {
+        type: "flat",
+        threshold: 250,
+        value: 10,
+        desc: "買滿 $250 減 $10"
+    },
+    sbg4: {
+        type: "flat",
+        value: 6,
+        target: "3600 Gems",
+        desc: "購買 3600 Skyblock Gems 減 $4"
+    },
+    May1: {
+        type: "flat",
+        threshold: 1,
+        value: 1,
+        desc: "減 $1"
+    },
+    r4axh3: {
+        type: "flat",
+        threshold: 59,
+        value: 3,
+        desc: "[Thanks for bug report] 買滿 $59 減 $3"
+    },
+    gb5ht7GBQ: {
+        type: "flat",
+        value: 12,
+        target: "VIP,"
+        desc: "[限時優惠] 購買 VIP 減 $12"
+    },
+    usernt7Gamgb5ht7Gtt7G7Gt7GQehere: {
+        type: "flat",
+        threshold: 1,
+        value: 3,
+        desc: "[五星 Comment] 減$3"
+    }
+
+};
