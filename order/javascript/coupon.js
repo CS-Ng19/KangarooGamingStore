@@ -10,6 +10,15 @@ window.coupons = {
   },
   May1:{
     type:"flat",threshold:1,value:1,desc:"減 $1"
+  },
+  r4axh3:{
+    type:"flat",threshold:59,value:3,desc:"[Thanks for bug report] 買滿 $59 減 $3"
+  },
+  gb5ht7GBQ:{
+    type:"flat",value:12,target:"VIP,"desc:"[限時優惠] 購買 VIP 減 $12"
+  },
+  usernt7Gamgb5ht7Gtt7G7Gt7GQehere:{
+    type:"flat",threshold:1,value:3,desc:"【五星Comment】減$3"
   }
 
 };
