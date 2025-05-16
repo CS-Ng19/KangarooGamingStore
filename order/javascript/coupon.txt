@@ -15,7 +15,11 @@ window.coupons = {
   },
   sbg4:{
     type:"flat",value:6,target:"3600 Gems",desc:"購買 3600 Skyblock Gems 減 $4"
+  },
+  May1:{
+    type:"flat",threshold:0,value:1,desc:"減 $1"
   }
+
 };
 
 https://tool.chinaz.com/js.aspx
