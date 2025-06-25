@@ -10,5 +10,14 @@ window.coupons = {
         threshold: 0.1,
         value: 5,
         desc: "[六月 & 七月 限時95折] "
+    },
+    happy: {
+        type: "percent",
+        value: 12,
+        threshold: 1,
+        target: {
+            "VIP", "VIP+", "MVP", "MVP+", "升級至 [VIP+]", "升級至 [MVP]","升級至 [MVP+]"
+        },
+        desc: "購買 Rank 減 12.5%"
     }
 };
