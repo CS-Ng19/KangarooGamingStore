@@ -9,6 +9,6 @@ window.coupons = {
         type: "percent",
         threshold: 0.1,
         value: 5,
-        desc: "[六月 & 七月 限時95折 ] "
+        desc: "[六月 & 七月 限時95折] "
     }
 };
