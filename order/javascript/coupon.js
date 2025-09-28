@@ -8,7 +8,7 @@ window.coupons = {
     enjoyVIP: {
         type: "percent",
         value: 5,
-        target:"VIP"
+        target:"VIP",
         desc: "[VIP Rank 限時95折]"
     },
     Experience: {
