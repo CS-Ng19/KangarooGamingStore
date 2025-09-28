@@ -13,7 +13,7 @@ window.coupons = {
     },
     Experience: {
         type: "flat",
-        threshold: 1,
+        target:"Minecraft Experience限定: 村民拯救者披風",
         value: 300,
         desc: "選購任何產品加配 Experience Cape 即減$300"
     },
