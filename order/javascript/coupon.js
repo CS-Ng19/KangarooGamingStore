@@ -15,7 +15,7 @@ window.coupons = {
         type: "flat",
         threshold: 1,
         value: 300,
-        desc: "[選購任何產品加配 Experience Cape 即減$300]"
+        desc: "選購任何產品加配 Experience Cape 即減$300"
     },
     Oct3: {
         type: "flat",
