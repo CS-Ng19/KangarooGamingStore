@@ -25,13 +25,13 @@ window.coupons = {
     },
     Halloween25: {
         type: "percent",
-        threshold: 39.9,
+        threshold: 39,
         value: 15,
         desc: "[🎃Halloween 2025促銷] 15%折扣 - VIP,VIP+,MVP,MVP+ "
     },
     xmas2025: {
         type: "percent",
-        threshold: 39.9,
+        threshold: 39,
         value: 15,
         desc: "[聖誕2025促銷] 15%折扣 - VIP,VIP+,MVP,MVP+ "
     }
