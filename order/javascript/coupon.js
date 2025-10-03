@@ -22,5 +22,17 @@ window.coupons = {
         threshold: 99,
         value: 3,
         desc: "滿$99減$3"
+    },
+    Halloween25: {
+        type: "percent",
+        threshold: 39.9,
+        value: 15,
+        desc: "[🎃Halloween 2025促銷] 15%折扣 - VIP,VIP+,MVP,MVP+ "
+    },
+    xmas2025: {
+        type: "percent",
+        threshold: 39.9,
+        value: 15,
+        desc: "[聖誕2025促銷] 15%折扣 - VIP,VIP+,MVP,MVP+ "
     }
 };
