@@ -35,7 +35,7 @@ window.coupons = {
         threshold: 39,
         value: 15,
         desc: "[聖誕2025促銷] 15%折扣 - VIP,VIP+,MVP,MVP+ "
-    } ,
+    },
     imweird012: {
         type: "flat",
         threshold: 40,
