@@ -41,4 +41,5 @@ window.coupons = {
         threshold: 40,
         value: 3,
         desc: "[VIP Customer] 減$3優惠 - 無限次使用 "
+   }
 };
