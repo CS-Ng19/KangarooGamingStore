@@ -294,14 +294,14 @@ footer small {
 /* Continuous Scroll Track */
 .scrolling-photo-track {
   display: flex;
-  width: 50%;
-  height: 50%;
+  width: 200%;
+  height: 100%;
   animation: scrollLeftToRight 8s linear infinite;
 }
 
 .scrolling-photo-track img {
   width: 50%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
 }
 
