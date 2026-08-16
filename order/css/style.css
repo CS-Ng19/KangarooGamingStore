@@ -276,3 +276,41 @@ footer small {
     color: #666;
     margin-bottom: 1rem;
 }
+
+/* 20260817 IMG SCROLLING */
+/* Middle-Right Positioning Container */
+.scrolling-photo-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Continuous Scroll Track */
+.scrolling-photo-track {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  animation: scrollLeftToRight 8s linear infinite;
+}
+
+.scrolling-photo-track img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keyframes for Left-to-Right Scrolling */
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
