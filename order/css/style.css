@@ -284,8 +284,8 @@ footer small {
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
-  width: 320px;
-  height: 320px;
+  width: 400px; /* Adjust wrapper width as desired */
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -295,22 +295,21 @@ footer small {
 .scrolling-photo-track {
   display: flex;
   width: 200%;
-  height: 100%;
-  animation: scrollLeftToRight 8s linear infinite;
+  animation: scrollRightToLeft 8s linear infinite;
 }
 
 .scrolling-photo-track img {
   width: 50%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Maintains full image aspect ratio */
+  object-fit: contain; /* Prevents image cropping */
 }
 
-/* Keyframes for Left-to-Right Scrolling */
-@keyframes scrollLeftToRight {
+/* Keyframes for Right-to-Left Scrolling */
+@keyframes scrollRightToLeft {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-50%);
   }
 }
