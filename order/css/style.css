@@ -313,3 +313,22 @@ footer small {
     transform: translateX(-50%);
   }
 }
+
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .scrolling-photo-wrapper {
+    position: relative; /* Switches from absolute overlay to natural page flow */
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 90%; /* Scales to fit mobile screens */
+    max-width: 320px;
+    margin: 20px auto; /* Centers the banner on mobile */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Speeds up animation slightly for narrower screens */
+  .scrolling-photo-track {
+    animation: scrollRightToLeft 6s linear infinite;
+  }
+}
